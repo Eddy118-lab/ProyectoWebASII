@@ -1,0 +1,66 @@
+/* App.css */
+
+/* Estilos generales para la aplicación */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Solo mostrar el menú lateral si se está en un módulo */
+body:not(.in-module) .side-nav {
+  display: none;
+}
+
+/* Mostrar el menú lateral cuando se está en un módulo */
+body.in-module .side-nav {
+  display: block;
+}
+
+/* Estilo del contenedor principal de la aplicación */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que la aplicación ocupe al menos toda la altura de la ventana */
+}
+
+/* Contenido principal */
+.App-content {
+  flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+}
+
+/* Estilo del menú lateral */
+.side-nav {
+  font-size: 25px;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-nav.open {
+  left: 0;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  font-size: 22px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.side-nav li:hover {
+  background-color: #575757;
+}
