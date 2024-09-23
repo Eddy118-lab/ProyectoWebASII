@@ -31,7 +31,10 @@ import {
 } from '../controllers/PagoProveedorController.js';
 import{
     deleteColaborador,getPersonal, getPersolaById, createColaborador, updateColaborador
-}from'../controllers/GestionPersonalController.js';
+}from'../controllers/ConductorController.js';
+
+// Importar el controlador de compras
+import { realizarCompra } from '../controllers/CompraController.js';
 
 const router = express.Router();
 
@@ -108,4 +111,8 @@ router.delete('/conductores/:id', deleteColaborador);
 ///// INICIO DE SESIÓN
 router.post('/login', login); // Ruta para el login
 
+///// CRUD DE COMPRAS
+router.post('/compras', realizarCompra); // Ruta para realizar una compra
+
 export default router;
+

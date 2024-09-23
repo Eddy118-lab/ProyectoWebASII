@@ -27,7 +27,7 @@ function Header({ onLogout }) {
     '/gestion-personal/colaborador',
     '/usuario/gestion-usuarios',
     '/cliente/gestion-clientes',
-    '/compras',
+    '/compras',  // Aquí se incluye la ruta del nuevo módulo
     '/material/gestion-materiales',
     '/factura-proveedor/gestion-facturas-proveedores'
   ].includes(location.pathname);
@@ -110,7 +110,7 @@ function Header({ onLogout }) {
           <li onClick={() => handleNavItemClick('/gestion-personal/colaborador')}>Gestión de Personal</li>
           <li onClick={() => handleNavItemClick('/usuario/gestion-usuarios')}>Gestión de Usuarios</li>
           <li onClick={() => handleNavItemClick('/cliente/gestion-clientes')}>Gestión de Clientes</li>
-          <li onClick={() => handleNavItemClick('/compras')}>Gestión de Compras</li>
+          <li onClick={() => handleNavItemClick('/compras')}>Gestión de Compras</li> {/* Nuevo módulo */}
           <li onClick={() => handleNavItemClick('/material/gestion-materiales')}>Gestión de Materiales</li>
           <li onClick={() => handleNavItemClick('/factura-proveedor/gestion-facturas-proveedores')}>Gestión de Facturas de Proveedores</li>
         </ul>

@@ -1,9 +1,9 @@
-import GestionPersonal from '../models/Conductor.js';
+import Conductor from '../models/Conductor.js';
 
 // Obtener todos los colaboradores
 export const getPersonal = async (req, res) => {
     try {
-        const personal = await GestionPersonal.findAll();
+        const personal = await Conductor.findAll();
         res.json(personal);
     } catch (error) {
         res.json({ message: error.message });
@@ -13,7 +13,7 @@ export const getPersonal = async (req, res) => {
 // Obtener un colaborador por ID
 export const getPersolaById = async (req, res) => {
     try {
-        const personal = await GestionPersonal.findByPk(req.params.id);
+        const personal = await Conductor.findByPk(req.params.id);
         if (personal) {
             res.json(personal);
         } else {
@@ -27,7 +27,7 @@ export const getPersolaById = async (req, res) => {
 // Crear un nuevo colaborador
 export const createColaborador = async (req, res) => {
     try {
-        const colaboradorpost = await GestionPersonal.create(req.body);
+        const colaboradorpost = await Conductor.create(req.body);
         res.status(201).json(colaboradorpost);
     } catch (error) {
         res.json({ message: error.message });
@@ -37,7 +37,7 @@ export const createColaborador = async (req, res) => {
 // Actualizar un colaborador
 export const updateColaborador = async (req, res) => {
     try {
-        const colaboradorput = await GestionPersonal.findByPk(req.params.id);
+        const colaboradorput = await Conductor.findByPk(req.params.id);
         if (!colaboradorput) {
             return res.status(404).json({ message: 'Colaborador no encontrado' });
         }
@@ -51,7 +51,7 @@ export const updateColaborador = async (req, res) => {
 // Eliminar un colaborador
 export const deleteColaborador = async (req, res) => {
     try {
-        const result = await GestionPersonal.destroy({
+        const result = await Conductor.destroy({
             where: { id: req.params.id }
         });
         if (result) {

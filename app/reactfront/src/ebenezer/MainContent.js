@@ -52,9 +52,10 @@ function MainContent() {
           </Link>
         </div>
         <div className="module-card">
-          <img src={compra} alt="Gestión de Compras" />
-          <h3>Gestión de Compras</h3>
-          <p>Próximamente</p>
+          <Link to="/compras" className="btn-module">
+            <img src={compra} alt="Gestión de Compras" />  {/* Nueva tarjeta */}
+            <h3>Gestión de Compras</h3>
+          </Link>
         </div>
         <div className="module-card">
           <Link to="/material/gestion-materiales" className="btn-module">
