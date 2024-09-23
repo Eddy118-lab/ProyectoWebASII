@@ -1,0 +1,41 @@
+/* Estilos específicos para CompShowDetalleFacturaProveedor */
+.detalle-factura-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.detalle-factura-title {
+    margin-top: 100px; /* Para evitar que quede debajo del header */
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.detalle-factura-search-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-factura-table-container {
+    margin-top: 20px;
+}
+
+.detalle-factura-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detalle-factura-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.detalle-factura-back-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+}

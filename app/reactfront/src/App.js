@@ -8,7 +8,7 @@ import CompShowUsuario from './ebenezer/ShowUsuario';
 import CompCreateUsuario from './ebenezer/CreateUsuario';
 import CompEditUsuario from './ebenezer/EditUsuario';
 import CompShowCliente from './ebenezer/ShowCliente';
-import CompCreateCliente from './ebenezer/CreateCliente';
+import CompCreateCliente from './ebenezer/CreateCliente.js';
 import CompEditCliente from './ebenezer/EditCliente';
 import Header from './ebenezer/Header.js';
 import MainContent from './ebenezer/MainContent.js';
@@ -21,7 +21,7 @@ import CompEditMaterial from './ebenezer/EditMaterial';
 import CompShowFacturaProveedor from './ebenezer/ShowFacturaProveedor';
 import CompCreateFacturaProveedor from './ebenezer/CreateFacturaProveedor';
 import CompEditFacturaProveedor from './ebenezer/EditFacturaProveedor';
-import CompShowDetalleFacturaProveedor from './ebenezer/ShowDetProv';
+import CompShowDetalleFacturaProveedor from './ebenezer/ShowDetalleFacturaProveedor';
 import CompShowPagoProveedor from './ebenezer/ShowPagoProveedor';
 import CompShowColaborador from './ebenezer/ShowColaborador.js';
 import CompCreateColaborador from './ebenezer/CreateColaborador.js';
@@ -64,30 +64,31 @@ function App() {
             
             {/* Otras rutas existentes */}
             <Route path="/usuario/gestion-usuarios" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowUsuario /></PrivateRoute>} />
-            <Route path="/usuario/crear-usuario" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateUsuario /></PrivateRoute>} />
-            <Route path="/usuario/editar-usuario/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditUsuario /></PrivateRoute>} />
+            <Route path="/usuario/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateUsuario /></PrivateRoute>} />
+            <Route path="/usuario/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditUsuario /></PrivateRoute>} />
 
             <Route path="/cliente/gestion-clientes" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowCliente /></PrivateRoute>} />
-            <Route path="/cliente/crear-cliente" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateCliente /></PrivateRoute>} />
-            <Route path="/cliente/editar-cliente/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditCliente /></PrivateRoute>} />
+            <Route path="/cliente/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateCliente /></PrivateRoute>} />
+            <Route path="/cliente/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditCliente /></PrivateRoute>} />
 
             <Route path="/gestion-personal/colaborador" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowColaborador /></PrivateRoute>} />
-            <Route path="/gestion-personal/crear-colaborador" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateColaborador /></PrivateRoute>} />
-            <Route path="/gestion-personal/editar-colaborador/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditColaborador /></PrivateRoute>} />
+            <Route path="/gestion-personal/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateColaborador /></PrivateRoute>} />
+            <Route path="/gestion-personal/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditColaborador /></PrivateRoute>} />
 
             <Route path="/proveedor/gestion-proveedores" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowProveedor /></PrivateRoute>} />
-            <Route path="/proveedor/crear-proveedor" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateProveedor /></PrivateRoute>} />
-            <Route path="/proveedor/editar-proveedor/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditProveedor /></PrivateRoute>} />
+            <Route path="/proveedor/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateProveedor /></PrivateRoute>} />
+            <Route path="/proveedor/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditProveedor /></PrivateRoute>} />
 
             <Route path="/material/gestion-materiales" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowMaterial /></PrivateRoute>} />
-            <Route path="/material/crear-material" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateMaterial /></PrivateRoute>} />
-            <Route path="/material/editar-material/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditMaterial /></PrivateRoute>} />
+            <Route path="/material/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateMaterial /></PrivateRoute>} />
+            <Route path="/material/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditMaterial /></PrivateRoute>} />
 
             <Route path="/factura-proveedor/gestion-facturas-proveedores" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowFacturaProveedor /></PrivateRoute>} />
-            <Route path="/factura-proveedor/crear-factura-proveedor" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateFacturaProveedor /></PrivateRoute>} />
-            <Route path="/factura-proveedor/editar-factura-proveedor/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditFacturaProveedor /></PrivateRoute>} />
-             {/* Nuevas rutas para Gestión de facturas de Proveedores */}
-             <Route path="/factura-proveedor/gestion-detalles-facturas-proveedores/:id" element={<CompShowDetalleFacturaProveedor />} />
+            <Route path="/factura-proveedor/create" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompCreateFacturaProveedor /></PrivateRoute>} />
+            <Route path="/factura-proveedor/edit/:id" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompEditFacturaProveedor /></PrivateRoute>} />
+             
+            {/* Nuevas rutas para Gestión de facturas de Proveedores */}
+            <Route path="/factura-proveedor/gestion-detalles-facturas-proveedores/:id" element={<CompShowDetalleFacturaProveedor />} />
             <Route path="/factura-proveedor/gestion-pagos-proveedores/:id" element={<CompShowPagoProveedor />} />
 
             {/* Ruta del nuevo módulo de compras */}

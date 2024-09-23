@@ -139,7 +139,7 @@ const FlujoCompra = () => {
   };
 
   return (
-    <div>
+    <div className="flujo-compra-container">
       <h1>Flujo de Compra</h1>
 
       {/* Mostrar errores */}

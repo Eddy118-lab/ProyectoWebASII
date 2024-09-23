@@ -1,68 +1,68 @@
 /* FlujoCompra.css */
 
-.container {
+.flujo-compra-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto; /* Espacio superior e inferior */
+    margin: 2rem auto;
     padding: 2rem;
-    max-width: 800px; /* Ancho máximo del contenedor */
-    background-color: #f8f9fa; /* Color de fondo */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin-bottom: 1.5rem; /* Espacio inferior del encabezado */
-    color: #343a40; /* Color del texto */
+.flujo-compra-container h1 {
+    margin-bottom: 1.5rem;
+    color: #343a40;
 }
 
-h2 {
-    margin-top: 1.5rem; /* Espacio superior del subtítulo */
-    margin-bottom: 1rem; /* Espacio inferior del subtítulo */
-    color: #495057; /* Color del texto */
+.flujo-compra-container h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #495057;
 }
 
-select,
-input {
+.flujo-compra-container select,
+.flujo-compra-container input {
     padding: 0.5rem;
-    margin-bottom: 1rem; /* Espacio inferior en inputs y selects */
-    width: 100%; /* Ancho completo */
-    border: 1px solid #ced4da; /* Borde del input */
-    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
 }
 
-button {
-    padding: 0.5rem 1rem; /* Espaciado del botón */
-    background-color: #007bff; /* Color del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición de color */
+.flujo-compra-container button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+.flujo-compra-container button:hover {
+    background-color: #0056b3;
 }
 
-ul {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
+.flujo-compra-container ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-li {
-    padding: 0.5rem; /* Espaciado en la lista */
-    background-color: #e9ecef; /* Color de fondo de los items */
-    border-radius: 4px; /* Bordes redondeados */
-    margin-bottom: 0.5rem; /* Espacio inferior en los items */
+.flujo-compra-container li {
+    padding: 0.5rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
 }
 
-.text-danger {
-    color: #dc3545; /* Color de texto de error */
+.flujo-compra-container .text-danger {
+    color: #dc3545;
 }
 
-.text-success {
-    color: #28a745; /* Color de texto de éxito */
+.flujo-compra-container .text-success {
+    color: #28a745;
 }
