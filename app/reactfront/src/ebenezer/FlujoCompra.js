@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Style/FlujoCompra.css';
 
 const FlujoCompra = () => {
   // Estados para manejar los datos del flujo de compra
@@ -18,7 +19,7 @@ const FlujoCompra = () => {
   useEffect(() => {
     const fetchProveedores = async () => {
       try {
-        const response = await axios.get('/api/proveedores');
+        const response = await axios.get('http://localhost:8000/api/proveedores');
         setProveedores(response.data);
       } catch (err) {
         setError('Error al cargar los proveedores.');
@@ -27,7 +28,7 @@ const FlujoCompra = () => {
 
     const fetchMateriales = async () => {
       try {
-        const response = await axios.get('/api/materiales');
+        const response = await axios.get('http://localhost:8000/api/materiales');
         setMateriales(response.data);
       } catch (err) {
         setError('Error al cargar los materiales.');
@@ -102,7 +103,7 @@ const FlujoCompra = () => {
     }
 
     try {
-      const response = await axios.post('/api/facturas-proveedores', {
+      const response = await axios.post('http://localhost:8000/api/facturas-proveedores', {
         proveedor_id: proveedorSeleccionado.id,
         monto: listaCompra.reduce((acc, item) => acc + item.cantidad * item.costo, 0),
       });
