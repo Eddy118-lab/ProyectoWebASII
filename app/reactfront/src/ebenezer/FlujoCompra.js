@@ -3,7 +3,6 @@ import axios from 'axios';
 import './Style/FlujoCompra.css';
 
 const FlujoCompra = () => {
-  // Estados para manejar los datos del flujo de compra
   const [proveedores, setProveedores] = useState([]);
   const [proveedorSeleccionado, setProveedorSeleccionado] = useState(null);
   const [materiales, setMateriales] = useState([]);
@@ -91,7 +90,7 @@ const FlujoCompra = () => {
     setError('');
   };
 
-  // Crear factura
+  // Crear factura y actualizar stock
   const handleCrearFactura = async () => {
     if (!proveedorSeleccionado) {
       setError('Debe seleccionar un proveedor antes de registrar la factura.');
@@ -103,6 +102,7 @@ const FlujoCompra = () => {
     }
 
     try {
+      // Crear la factura
       const response = await axios.post('http://localhost:8000/api/facturas-proveedores', {
         proveedor_id: proveedorSeleccionado.id,
         monto: listaCompra.reduce((acc, item) => acc + item.cantidad * item.costo, 0),
@@ -111,9 +111,21 @@ const FlujoCompra = () => {
       setFacturaId(response.data.id);
       setMontoPago(response.data.monto);
       setMensaje('Factura registrada exitosamente.');
+
+      // Actualizar el stock de los materiales comprados
+      await Promise.all(
+        listaCompra.map(async (item) => {
+          const nuevoStock = item.cantidad + item.cantidad_comprada; // Incrementa la cantidad comprada
+          await axios.put(`http://localhost:8000/api/materiales/${item.id}`, {
+            cantidad: nuevoStock,
+          });
+        })
+      );
+
+      setMensaje('Stock actualizado exitosamente.');
       setError('');
     } catch (err) {
-      setError('Error al registrar la factura.');
+      setError('Error al registrar la factura o actualizar el stock.');
     }
   };
 
@@ -125,7 +137,7 @@ const FlujoCompra = () => {
     }
 
     try {
-      await axios.post('/api/pagos-proveedores', {
+      await axios.post('http://localhost:8000/api/pagos-proveedores', {
         factura_proveedor_id: facturaId,
         monto: montoPago,
         metodo_pago: 'transferencia',

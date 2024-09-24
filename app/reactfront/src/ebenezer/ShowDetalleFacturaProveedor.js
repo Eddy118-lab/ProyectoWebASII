@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import SearchDetalleFacturaProveedor from './SearchDetalleFacturaProveedor';
@@ -20,8 +20,12 @@ const CompShowDetalleFacturaProveedor = () => {
         const getFactura = async () => {
             try {
                 const res = await axios.get(`${URI}${id}`);
-                setFactura(res.data.items || [res.data]);
-                setFilteredFactura(res.data.items || [res.data]);
+                console.log(res.data); // Añadido para verificar los datos recibidos
+
+                // Aseguramos que 'factura' sea siempre un array
+                const facturaItems = Array.isArray(res.data.items) ? res.data.items : [res.data];
+                setFactura(facturaItems);
+                setFilteredFactura(facturaItems);
             } catch (error) {
                 console.error("Error al obtener los detalles de la factura:", error);
             }
@@ -80,7 +84,7 @@ const CompShowDetalleFacturaProveedor = () => {
                             <th>Subtotal</th>
                             <th>Descuento</th>
                             <th>Total</th>
-                            <th>Nombre del Producto</th> {/* Cambiado a Nombre del Producto */}
+                            <th>Nombre del Producto</th>
                             <th>Factura-Proveedor ID</th>
                         </tr>
                     </thead>
