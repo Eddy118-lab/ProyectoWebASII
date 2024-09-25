@@ -1,0 +1,146 @@
+.hero-section {
+  background-size: cover; /* Para cubrir todo el área */
+  background-position: center; /* Centra la imagen */
+  padding: 60px 20px;
+  text-align: center;
+  height: 400px; /* Asegúrate de que haya una altura para ver la imagen */
+}
+
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.cta-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff3b3b;
+}
+
+.services-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-item {
+  width: 30%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+  margin-top: 10px;
+}
+
+.mission-section, .values-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* Fondo similar al de la sección de servicios */
+  text-align: center;
+}
+
+.mission-content {
+  margin-top: 20px; /* Margen superior para el contenido de misión */
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio */
+  justify-content: space-around; /* Espaciado entre elementos */
+}
+
+.values-item {
+  width: 45%; /* Ancho de cada elemento, ajusta según necesites */
+  padding: 20px;
+  background-color: white; /* Fondo blanco para cada valor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 10px 0; /* Margen vertical */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.values-item strong {
+  display: block; /* Para que el título del valor ocupe una línea completa */
+  margin-bottom: 10px; /* Margen inferior para separación */
+}
+
+
+.values-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values-section li {
+  margin-bottom: 10px;
+}
+
+.values-section li strong {
+  font-weight: bold;
+  color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  main {
+    padding: 20px;
+    margin-bottom: 60px;  /* Para asegurar que no cubra el footer */
+  }
+  
+ 

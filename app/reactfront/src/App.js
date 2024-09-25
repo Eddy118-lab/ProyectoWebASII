@@ -26,9 +26,12 @@ import CompShowColaborador from './ebenezer/ShowColaborador.js';
 import CompCreateColaborador from './ebenezer/CreateColaborador.js';
 import CompEditColaborador from './ebenezer/EditColaborador.js';
 import FlujoCompra from './ebenezer/FlujoCompra';  // Importa el nuevo componente de compras
-import HeaderInicio from "./inicio/HeaderInicio.js";
-import FooterInicio from "./inicio/FooterInicio.js";
-import MainContentInicio from "./inicio/MainContentInicio.js";
+import HeaderInicio from './inicio/HeaderInicio.js';
+import FooterInicio from './inicio/FooterInicio.js';
+import MainContentInicio from './inicio/MainContentInicio.js';
+import SobreNosotros from './inicio/SobreNosotros.js';
+import Productos from './inicio/Productos.js';
+import Contacto from './inicio/Contacto.js';
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -47,12 +50,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* Muestra el Header y Footer del sistema solo si el usuario está autenticado */}
         {isAuthenticated && <Header onLogout={handleLogout} />}
 
         <div className="App-content">
           <Routes>
-            {/* Ruta de inicio que se muestra por defecto y es pública */}
             <Route path="/inicio" element={
               <>
                 <HeaderInicio />
@@ -61,8 +62,32 @@ function App() {
               </>
             } />
             
+            <Route path="/nosotros" element={
+              <>
+                <HeaderInicio />
+                <SobreNosotros />
+                <FooterInicio />
+              </>
+            } />
+            
+            <Route path="/productos" element={
+              <>
+                <HeaderInicio />
+                <Productos />
+                <FooterInicio />
+              </>
+            } />
+            
+            <Route path="/contacto" element={
+              <>
+                <HeaderInicio />
+                <Contacto />
+                <FooterInicio />
+              </>
+            } />
+            
             <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
-            <Route path="/" element={isAuthenticated ? <MainContent /> : <Navigate to="/login" />} />
+            <Route path="/" element={isAuthenticated ? <MainContent /> : <Navigate to="/inicio" />} />
             
             {/* Rutas protegidas */}
             <Route path="/usuario/gestion-usuarios" element={<PrivateRoute isAuthenticated={isAuthenticated}><CompShowUsuario /></PrivateRoute>} />

@@ -1,10 +1,11 @@
+import './Estilos/style.css';
 function FooterInicio() {
-    return (
-      <footer>
-        <p>© 2024 Transportes Eben-ezer. Todos los derechos reservados.</p>
-      </footer>
-    );
-  }
-  
-  export default FooterInicio;
-  
+  return (
+    <footer>
+      <p>&copy; 2024 Transportes Eben-Ezer. Todos los derechos reservados.</p>
+      <p>Contacto: atencioncliente@eben-ezer.com | Tel: (+502) 5604 9424</p>
+    </footer>
+  );
+}
+
+export default FooterInicio;
