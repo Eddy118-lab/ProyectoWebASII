@@ -1,5 +1,5 @@
 import './Estilos/style.css';
-import camImage from './picture/cam.jpg'; // Importa la imagen
+import camImage from './picture/cam.jpg';
 
 function MainContentInicio() {
   return (
@@ -19,24 +19,24 @@ function MainContentInicio() {
         <h2>Nuestros Servicios</h2>
         <div className="services-grid">
           <div className="service-item">
-            <i className="fas fa-truck"></i>
+            <i className="fas fa-truck-moving"></i> {/* Cambiado a camión de carga pesada */}
             <h3>Transporte Nacional</h3>
             <p>
               Ofrecemos transporte de carga a nivel nacional, con rutas estratégicas que aseguran rapidez y eficiencia.
             </p>
           </div>
           <div className="service-item">
-            <i className="fas fa-plane"></i>
-            <h3>Logística Internacional</h3>
+            <i className="fas fa-boxes"></i> {/* Ícono representativo de productos */}
+            <h3>Productos</h3>
             <p>
-              Gestionamos envíos internacionales de manera segura, cubriendo todos los aspectos logísticos para tu tranquilidad.
+              Comercializamos materiales de construcción y suministros, asegurando su distribución eficiente y a tiempo.
             </p>
           </div>
           <div className="service-item">
-            <i className="fas fa-warehouse"></i>
-            <h3>Almacenamiento</h3>
+          <i className="fa-solid fa-truck-fast"></i> {/* Ícono representativo de flota */}
+            <h3>Flota</h3>
             <p>
-              Contamos con instalaciones de almacenamiento modernas y seguras para proteger tu carga mientras llega a su destino.
+              Disponemos de una amplia flota de vehículos especializados para el transporte de cargas pesadas y voluminosas.
             </p>
           </div>
         </div>
@@ -46,20 +46,21 @@ function MainContentInicio() {
         <h2>Nuestra Misión</h2>
         <div className="mission-content">
           <p>
-          Proveer servicios de transporte y suministro de materiales de construcción con eficiencia,
-responsabilidad y calidad. Nuestro compromiso es crear un ambiente de trabajo armonioso donde cada
-colaborador se sienta valorado y motivado para contribuir al éxito de la empresa, ofreciendo a nuestros
-clientes soluciones confiables que superen sus expectativas.
+            Proveer servicios de transporte y suministro de materiales de construcción con eficiencia, 
+            responsabilidad y calidad. Nuestro compromiso es crear un ambiente de trabajo armonioso donde cada 
+            colaborador se sienta valorado y motivado para contribuir al éxito de la empresa, ofreciendo a nuestros 
+            clientes soluciones confiables que superen sus expectativas.
           </p>
         </div>
       </section>
+
       <section className="mission-section">
         <h2>Nuestra Visión</h2>
         <div className="mission-content">
           <p>
           Ser la empresa líder en transporte de materiales de construcción en Guatemala, reconocida por
-nuestra puntualidad, calidad de servicio y compromiso con la satisfacción del cliente, expandiendo nuestra
-cobertura y mejorando continuamente nuestras operaciones para adaptarnos a las necesidades del mercado.
+          nuestra puntualidad, calidad de servicio y compromiso con la satisfacción del cliente, expandiendo nuestra
+          cobertura y mejorando continuamente nuestras operaciones para adaptarnos a las necesidades del mercado.
           </p>
         </div>
       </section>

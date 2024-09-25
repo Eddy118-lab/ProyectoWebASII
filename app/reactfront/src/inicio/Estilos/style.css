@@ -1,146 +1,287 @@
-.hero-section {
-  background-size: cover; /* Para cubrir todo el área */
-  background-position: center; /* Centra la imagen */
-  padding: 60px 20px;
-  text-align: center;
-  height: 400px; /* Asegúrate de que haya una altura para ver la imagen */
+body {
+  font-family: 'Roboto', sans-serif; /* Tipografía más moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea; /* Color de fondo suave y neutral */
+  min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% de la ventana */
+  display: flex;
+  flex-direction: column; /* Flexbox para hacer que el footer quede debajo */
+}
+
+main {
+  flex-grow: 1; /* El contenido principal toma el espacio restante */
+  padding: 20px;
+}
+
+.about-us {
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: auto; /* Centra el contenido */
+  padding: 20px;
+}
+
+.about-intro,
+.our-history,
+.our-mission-vision,
+.our-values,
+.our-team,
+.customer-testimonials {
+  background-color: white; /* Fondo blanco para secciones */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+  padding: 20px;
+  margin-bottom: 20px; /* Espacio entre secciones */
+}
+
+h2, h3 {
+  color: #007BFF; /* Color azul fuerte para los encabezados */
+  border-bottom: 2px solid #1e0000; /* Línea debajo del encabezado */
+  padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+
+p {
+  line-height: 1.6; /* Mejor espaciado entre líneas */
+  color: #000000; /* Color de texto más oscuro para mejor legibilidad */
+}
+
+ul {
+  list-style-type: none; /* Eliminar viñetas */
+  padding: 0; /* Sin padding */
+}
+
+li {
+  padding: 5px 0; /* Espaciado entre ítems */
+  color: #555; /* Color de texto para los ítems de la lista */
+}
+
+blockquote {
+  font-style: italic; /* Cursiva para las citas */
+  border-left: 4px solid #2a0000; /* Línea lateral azul */
+  padding-left: 15px; /* Espacio entre la línea y el texto */
+  margin: 20px 0; /* Espaciado arriba y abajo */
+  color: #777; /* Color de texto para citas */
+}
+
+blockquote em {
+  color: #333; /* Color más oscuro para el nombre del autor */
+  font-weight: bold; /* Negrita para el nombre del autor */
+}
+
+.about-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 20px 0; /* Espacio alrededor de la imagen */
+  border-radius: 10px; /* Bordes redondeados para un look más moderno */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1); /* Sombra suave para la imagen */
 }
 
 
+.hero-section {
+  background-size: cover; 
+  background-position: center; 
+  padding: 80px 20px; /* Más espacio para un look moderno */
+  text-align: center;
+  height: 450px;
+  color: white; /* Color de texto blanco para contraste */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center;
+  position: relative; /* Para efectos de fondo */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(247, 247, 247, 0.758); /* Capa oscura para mejorar la legibilidad */
+  z-index: 1; /* Asegura que la capa esté detrás del contenido */
+}
+
+.hero-content {
+  position: relative; /* Para posicionar el contenido por encima del fondo */
+  z-index: 2; /* Asegura que el texto esté en primer plano */
+}
+
 .hero-content h1 {
-  font-size: 3em;
+  font-size: 3.5em; /* Tamaño de fuente más grande */
   margin-bottom: 20px;
-  color: black;
+  color: #491d05; /* Color amarillo para destacar */
 }
 
 .hero-content p {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: black;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6; /* Espaciado entre líneas */
 }
 
 .cta-button {
-  background-color: #ff6b6b;
+  background-color: #007BFF; /* Azul fuerte */
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   text-decoration: none;
   font-size: 1.2em;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 5px; /* Bordes más sutiles */
+  transition: background-color 0.3s ease; /* Animación en hover */
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Sombra para el botón */
 }
 
 .cta-button:hover {
-  background-color: #ff3b3b;
+  background-color: #0056b3; /* Efecto hover con color más oscuro */
 }
 
 .services-section {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Fondo blanco */
   text-align: center;
+  border-top: 5px solid #370400; /* Línea superior para un look más moderno */
 }
 
 .services-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px; /* Espaciado entre elementos */
 }
 
 .service-item {
   width: 30%;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px; /* Bordes más redondeados */
+  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.1); /* Sombra más sutil */
+  transition: transform 0.2s; /* Animación al pasar el ratón */
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
 }
 
 .service-item h3 {
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.6em;
+  color: #3d1200; /* Color azul para los encabezados */
+}
+
+.service-item i {
+  font-size: 3em; /* Tamaño de íconos más grandes */
+  color: #1e0800; /* Azul para iconos */
 }
 
 .mission-section, .values-section {
-  padding: 40px 20px;
-  background-color: #f5f5f5; /* Fondo similar al de la sección de servicios */
+  padding: 60px 20px;
+  background-color: #f8f9fa;
   text-align: center;
-}
-
-.mission-content {
-  margin-top: 20px; /* Margen superior para el contenido de misión */
 }
 
 .values-grid {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio */
-  justify-content: space-around; /* Espaciado entre elementos */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .values-item {
-  width: 45%; /* Ancho de cada elemento, ajusta según necesites */
-  padding: 20px;
-  background-color: white; /* Fondo blanco para cada valor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  margin: 10px 0; /* Margen vertical */
-  border-radius: 8px; /* Bordes redondeados */
+  width: 45%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.values-item strong {
-  display: block; /* Para que el título del valor ocupe una línea completa */
-  margin-bottom: 10px; /* Margen inferior para separación */
+header {
+  background-color: #333; /* Mismo color para un look cohesivo */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2); /* Sombra para un efecto moderno */
 }
 
-
-.values-section ul {
+nav ul {
   list-style: none;
   padding: 0;
 }
 
-.values-section li {
-  margin-bottom: 10px;
+nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.values-section li strong {
-  font-weight: bold;
-  color: #333;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Animación de color */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  main {
-    padding: 20px;
-    margin-bottom: 60px;  /* Para asegurar que no cubra el footer */
-  }
-  
- 
+nav ul li a:hover {
+  color: #9a4300; /* Color amarillo para el efecto hover en enlaces */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  height: 100px;
+  margin-top: auto; /* Empuja el footer al final */
+  box-shadow: 0 2px 4px rgb(255, 255, 255); /* Sombra superior para el footer */
+}
+
+footer p {
+color: white;
+text-align: center;
+}
+
+/* Estilos generales */
+.productos-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Fondo claro */
+  min-height: 100vh; /* Asegura que ocupe el 100% de la altura */
+}
+
+h2 {
+  text-align: center;
+  color: #007BFF; /* Color azul para el título */
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Tamaño más grande */
+}
+
+h3 {
+  color: #333; /* Color gris oscuro para los subtítulos */
+  margin-top: 30px; /* Espacio superior */
+  font-size: 1.8em; /* Tamaño de subtítulos */
+}
+
+p {
+  color: #555; /* Color gris para el texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-align: justify; /* Justifica el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.services-list {
+  background-color: white; /* Fondo blanco para la lista de servicios */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.services-list ul {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0; /* Sin padding */
+}
+
+.services-list li {
+  margin-bottom: 15px; /* Espacio entre cada servicio */
+}
+
+.why-choose-us {
+  margin-top: 30px; /* Espacio superior */
+  padding: 20px; /* Espacio interno */
+  background-color: #e9ecef; /* Fondo gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
