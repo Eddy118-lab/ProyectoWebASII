@@ -17,7 +17,6 @@
   z-index: 1000;
 }
 
-
 /* Ajusta el tamaño del logo según sea necesario */
 .App-logo, .logo img {
   height: 70px; /* Ajusta el tamaño del logo */
@@ -78,7 +77,6 @@
   background-color: #91aec7; /* Color de fondo al pasar el cursor */
 }
 
-
 /* Ajustamos el margen superior para que el login no quede cubierto por el header */
 .login-container {
   display: flex;
@@ -110,7 +108,6 @@
   margin-bottom: 80px;
 }
 
-
 .user-menu {
   display: flex;
   align-items: center;
@@ -120,4 +117,40 @@
   margin-right: 10px;
   font-weight: bold;
   color: #333;
+}
+
+/* Estilo del menú lateral */
+.side-nav {
+  display: none; /* Oculta el menú lateral por defecto */
+  position: absolute; /* Posición absoluta para el menú lateral */
+  top: 80px; /* Ajusta según la altura del header */
+  left: 0; /* Alinea al lado izquierdo */
+  background-color: #3d5c78; /* Color de fondo del menú */
+  border-right: 1px solid #ccc; /* Límite derecho */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+  width: 200px; /* Ancho del menú lateral */
+  z-index: 100; /* Z-index para que aparezca sobre otros elementos */
+}
+
+/* Muestra el menú lateral cuando isNavOpen es verdadero */
+.side-nav.open {
+  display: block; /* Muestra el menú cuando está abierto */
+}
+
+.side-nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding de la lista */
+  margin: 0; /* Elimina el margin de la lista */
+  display: flex; /* Cambia a flex para disposición vertical */
+  flex-direction: column; /* Disposición en columna para una lista vertical */
+}
+
+.side-nav li {
+  padding: 15px 20px; /* Espaciado interno para los elementos de la lista */
+  color: white; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.side-nav li:hover {
+  background-color: #91aec7; /* Color de fondo al pasar el cursor */
 }

@@ -1,4 +1,5 @@
-import './Estilos/style.css';
+import './Estilos/SobreNosotros.css';
+import propi from './picture/propi.jpg';
 
 function SobreNosotros() {
   return (
@@ -9,7 +10,7 @@ function SobreNosotros() {
           Transportes Eben-Ezer es una empresa dedicada a proporcionar servicios de transporte de carga a nivel nacional e internacional. 
           Nos enorgullece ofrecer soluciones de transporte confiables, eficientes y seguras, con un fuerte enfoque en la satisfacción del cliente.
         </p>
-        <img src={`${process.env.PUBLIC_URL}/propi.jpg`} alt="Transporte Eben-Ezer" className="about-image" />
+        <img src={propi} alt="Propietarios" className="about-image" />
       </section>
 
       <section className="our-history">

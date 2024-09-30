@@ -1,4 +1,4 @@
-import './Estilos/style.css';
+import './Estilos/footer-inicio.css';
 function FooterInicio() {
   return (
     <footer>

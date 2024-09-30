@@ -1,4 +1,4 @@
-import './Estilos/style.css';
+import './Estilos/Producto.css';
 
 function Productos() {
     return (

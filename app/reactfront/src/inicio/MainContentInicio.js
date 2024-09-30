@@ -1,4 +1,4 @@
-import './Estilos/style.css';
+import './Estilos/MainContentInicio.css';
 import camImage from './picture/cam.jpg';
 
 function MainContentInicio() {
